@@ -16,4 +16,9 @@ class Money
     def eql?(other)
       self.paise == other.paise
     end
+    def to_s
+      puts "Rs #{(self.paise / 100) }& #{ ((self.paise % 100))} paise"
+    end
 end
+
+Money.new(100,99).to_s
